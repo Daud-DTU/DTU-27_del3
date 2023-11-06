@@ -1,0 +1,18 @@
+name: Reset Repository
+
+on:
+  workflow_run:
+    workflows: ["Reset Repository"]
+    types:
+      - completed
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reset Repository
+        run: |
+          git reset --hard ${{ github.event.client_payload.ref }}
+          git push -f origin ${{ github.event.client_payload.ref }}
+        env:
+          INPUT_REF: ${{ github.event.client_payload.ref }}
