@@ -46,6 +46,13 @@ public class spiller {
         for (int i = 0; i < antalletAfSpillere; i++) {
             System.out.println("Spiller " + (i + 1) + " har valgt " + spillersMuligheder[i]);
         }
+
+        // Visuel repræsentation af figurerne på brættet
+        System.out.println("\nVisuel repræsentation af figurerne på brættet:");
+        for (int i = 0; i < antalletAfSpillere; i++) {
+            System.out.print("  Spiller " + (i + 1) + " [" + spillersMuligheder[i] + "] ");
+        }
+
         scanner.close();
     }
 }
