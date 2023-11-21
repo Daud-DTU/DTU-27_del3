@@ -1,3 +1,5 @@
+package G27_CDIO3;
+
   import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
