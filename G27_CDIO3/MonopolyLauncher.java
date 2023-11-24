@@ -10,7 +10,7 @@ public class MonopolyLauncher {
 
         // Start GUI
         SwingUtilities.invokeLater(() -> {
-            new MonopolyGUI(latch);
+            new MonopolyGUI();
         });
 
         try {
